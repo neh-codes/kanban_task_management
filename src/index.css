@@ -7,3 +7,7 @@
         @apply bg-[#635fc7] py-2 px-3 rounded text-white text-lg font-semibold hover:opacity-80 duration-200
     }
 }
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+}
