@@ -24,7 +24,7 @@ function HeaderDropdown({setOpenDropdown , setBoardModalOpen}) {
 
 
   return (
-    <div className='py-10 px-6 absolute left-0 right-0 bottom-[-100vh] top-16 bg-[#00000080]'>
+    <div className='py-10 px-6 absolute left-0 right-0 bottom-[-100vh] top-14 bg-[#00000080]'>
 
 
         <div className='bg-white dark:bg-[#2b2c37] shadow-md shadow-[#364e7ela] w-full py-4 rounded-xl'
