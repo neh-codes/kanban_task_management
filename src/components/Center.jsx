@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 import AddEditBoardModal from "../modals/AddEditBoardModal";
 import Column from "./Column";
 import EmptyBoard from "./EmptyBoard";
-import Sidebar from "./SideBar";
+import Sidebar from "./Sidebar";
 
 function Center() {
   const [windowSize, setWindowSize] = useState([
