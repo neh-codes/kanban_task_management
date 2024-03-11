@@ -32,6 +32,7 @@ function Center() {
   const [isSideBarOpen, setIsSideBarOpen] = useState(true);
 
   return (
+    <>
     <div
       className={
         windowSize[0] >= 768 && isSideBarOpen
@@ -72,10 +73,11 @@ function Center() {
       {isBoardModalOpen && (
         <AddEditBoardModal
           type="edit"
-          setIsBoardModalOpen={setIsBoardModalOpen}
+          setBoardModalOpen={setIsBoardModalOpen}
         />
       )}
     </div>
+    </>
   );
 }
 

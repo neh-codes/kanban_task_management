@@ -5,26 +5,21 @@ import boardIcon from "../assets/icon-board.svg";
 import useDarkMode from "../Hooks/useDarkMode";
 import darkIcon from "../assets/icon-dark-theme.svg";
 import lightIcon from "../assets/icon-light-theme.svg";
-
 import showSidebarIcon from "../assets/icon-show-sidebar.svg";
 import hideSidebarIcon from "../assets/icon-hide-sidebar.svg";
-
-import boardsSlice from "../redux/boardsSlice";
+import boardSlice from "../redux/boardsSlice";
 import AddEditBoardModal from "../modals/AddEditBoardModal";
 
 function Sidebar({ isSideBarOpen, setIsSideBarOpen }) {
   const dispatch = useDispatch();
   const [isBoardModalOpen, setIsBoardModalOpen] = useState(false);
-  const [colorTheme, setTheme] = useDarkMode();
-  const [darkSide, setDarkSide] = useState(
-    colorTheme === "light" ? true : false
-  );
+  const [colorTheme, setTheme] = useDarkMode()
+    const [darkSide, setDarkSide] = useState(colorTheme === 'dark');
 
-  const toggleDarkMode = (checked) => {
-    setTheme(checked ? 'dark' : 'light');
-    setDarkSide(checked)
-  }
-
+    const toggleDarkMode = (checked) => {
+      setTheme(checked ? 'dark' : 'light');
+      setDarkSide(checked)
+    }
   const boards = useSelector((state) => state.boards);
 
   const toggleSidebar = () => {
@@ -59,7 +54,7 @@ function Sidebar({ isSideBarOpen, setIsSideBarOpen }) {
                       } `}
                       key={index}
                       onClick={() => {
-                        dispatch(boardsSlice.actions.setBoardActive({ index }));
+                        dispatch(boardSlice.actions.setBoardActive({ index }));
                       }}
                     >
                       <img src={boardIcon} className="  filter-white  h-4 " />{" "}
@@ -125,7 +120,7 @@ function Sidebar({ isSideBarOpen, setIsSideBarOpen }) {
       {isBoardModalOpen && (
         <AddEditBoardModal
           type="add"
-          setIsBoardModalOpen={setIsBoardModalOpen}
+          setBoardModalOpen={setIsBoardModalOpen}
         />
       )}
     </div>
